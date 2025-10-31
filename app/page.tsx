@@ -186,7 +186,7 @@ export function DataTableDemo() {
         )
       },
     },
-  ],[state])
+  ],[counter])
 
   const table = useReactTable({
     data,
@@ -209,7 +209,7 @@ export function DataTableDemo() {
 
   return (
     <div className="w-full">
-      Click this button to unmount all the rows
+      Click this button to unmount all the rows. The counter value is in the useMemo dependencies of the columns.{" "}
       <Button onClick={()=>setCounter(prev=>prev+1)}>
         {counter}
       </Button>
